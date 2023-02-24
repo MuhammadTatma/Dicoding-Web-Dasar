@@ -1,16 +1,14 @@
-const slider = document.querySelector(".slider");
+const burger = document.querySelector(".hamburger");
+const links = document.querySelector(".links");
+const linksHref = document.querySelectorAll(".links li a")
 
-const sliderArrow = document.querySelectorAll(".slider-arrow")
-const sliderImages = document.querySelectorAll(".slider img");
-const firstImage = sliderImages[0];
-let width = firstImage.clientWidth+2;
-sliderArrow.forEach( arrow => {
-    arrow.addEventListener("click", () => {
-        console.log("p");
-        if(arrow.id == "next"){
-            slider.scrollLeft += width;
-        }else{
-            slider.scrollLeft -= width;
-        }
+burger.addEventListener("click", ()=>{
+    links.classList.toggle("show-links")
+    
+})
+
+linksHref.forEach((a)=>{
+    a.addEventListener("click", ()=>{
+        links.classList.toggle("show-links")
     })
-}); 
+})

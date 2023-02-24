@@ -37,7 +37,7 @@ nav{
     position: fixed;  
     width: 100%;
     z-index: 1;
-    background-color: #f5fcff;  
+    background-color: #f5fcff; 
 }
 
 .logo{
@@ -52,11 +52,17 @@ nav{
     color: #3252DF;
 }
 
-nav ul{
+.hamburger{
+    display: none;
+}
+
+
+.links{
     display: flex;
     align-items: center;
     column-gap: 15px;
     color: #000000;
+    height: auto;
 }
 
 /* end navigation */
@@ -122,6 +128,7 @@ nav ul{
 .about figure{
     float: left;
     margin-right: 1.25rem;
+    margin-bottom: 0.75rem;
     text-align: center
 }
 
@@ -130,14 +137,10 @@ nav ul{
     border-radius: 15px;
 }
 
-
-
 .about p{
-    
     margin-bottom: 0.75rem;
     line-height: 28px;
 }
-
 /* end about  */
 
 
@@ -178,11 +181,41 @@ footer{
 }
 
 @media screen and (max-width:680px) {
+    .nav-header{
+        /* height: 10rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* display: block; */
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        row-gap: 0.75rem;
+        margin-top: 0.75rem;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .show-links{
+        height: auto;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
     .container{
         padding: 0.75rem 2.825%;;
     }
 
     nav{
+        display: block;
         background-color: #ecf9ff;        
     }
     
@@ -197,18 +230,12 @@ footer{
     .hero-image{
         display: none;
     }
+}
 
-
-
-    aside{
-        height: fit-content;
+@media screen and (max-width:450px){
+    figure{
+        width: 100vw;
     }
-
-    .about-content{
-        display: float;
-        float: left;
-    }
-
 }
 
 

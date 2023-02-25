@@ -183,12 +183,10 @@ footer{
 
 @media screen and (max-width:680px) {
     .nav-header{
-        /* height: 10rem; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        /* display: block; */
     }
 
     .links{
@@ -235,7 +233,7 @@ footer{
 
 @media screen and (max-width:450px){
     figure{
-        width: 100vw;
+        width: 100%;
     }
 }
 
